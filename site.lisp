@@ -1,21 +1,27 @@
+(push "/home/sky/weblocks/" asdf:*central-registry*)
+
 (asdf:oos 'asdf:load-op 'weblocks)
 
-(defpackage #:weblocks-site (:use :cl :weblocks))
+(defpackage #:weblocks-site (:use :cl :weblocks :cl-who))
 
 (in-package :weblocks-site)
 
 (defwebapp weblocks-site
            :description "Weblocks web application framework"
-           :prefix "/")
+           :prefix "/"
+           :public-files-path "./pub")
+
+(defmacro make-page (title &body body)
+  `(lambda ()
+     (with-html
+       (:h2 (esc ,title))
+       ,@body)))
 
 (defun make-welcome-page ()
-  (with-html
-    (:p "Welcome to Weblocks")))
+  (make-page "Welcome to Weblocks"))
 
 (defun make-features-page ()
-  (with-html
-    (:h2 "Features")
-
+  (make-page "Features"
     (:h3 "Thin JavaScript layer")
     (:p "Thanks to Weblocks' thin JavaScript layer your content degrades gracefully
         on clients that don't have JavaScript enabled.")
@@ -34,20 +40,26 @@
         any amount of URL parts and invoke other dispatchers.")))
 
 (defun make-installation-page ()
-  (with-html
-    (:p "Getting started")))
+  (make-page "Getting started"))
 
 (defun make-documentation-page ()
-  (with-html
-    (:p "Documentation")))
+  (make-page "Documentation"
+    (:h3 "Tutorials and blog posts")))
 
 (defun make-contributing-page ()
-  (with-html
-    (:p "Contributing")))
+  (make-page "Contributing"))
 
 (defun make-support-page ()
-  (with-html
-    (:p "Support")))
+  (make-page "Support"))
+
+(defmethod render-widget-body ((obj navigation) &rest args)
+  ;; we just cheat a bit until the new dispatching/rendering separation
+  ;; is ready for production
+  (let ((body-html (with-html-output-to-string (*weblocks-output-stream*)
+                     (:div :class "navigation-body"
+                           (call-next-method)))))
+  (apply #'render-navigation-menu obj args)
+  (format *weblocks-output-stream* body-html)))
 
 (defun init-user-session (comp)
   (setf (composite-widgets comp)
@@ -57,6 +69,5 @@
                                "Getting started" (make-installation-page)
                                "Documentation" (make-documentation-page)
                                "Support" (make-support-page)
-                               "Contributing" (make-contributing-page)
-                               ))))
+                               "Contributing" (make-contributing-page)))))
 

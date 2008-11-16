@@ -13,7 +13,7 @@
    height="1052.3622047"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.46+devel"
+   inkscape:version="0.46"
    sodipodi:docname="layout.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
@@ -392,7 +392,7 @@
        x2="88.54995"
        y1="166.26152"
        x1="85.196266"
-       gradientTransform="matrix(0.67524104,0,0,0.84923004,-200.91887,-331.20582)"
+       gradientTransform="matrix(0.6752325,0,0,0.8515276,-200.91807,-331.5115)"
        gradientUnits="userSpaceOnUse"
        id="linearGradient4279"
        xlink:href="#linearGradient3435-9"
@@ -437,7 +437,7 @@
        x2="88.54995"
        y1="166.26152"
        x1="85.196266"
-       gradientTransform="matrix(0.67524104,0,0,0.84923003,-200.79274,-367.61876)"
+       gradientTransform="matrix(0.675241,0,0,0.8803549,-200.79274,-369.76834)"
        gradientUnits="userSpaceOnUse"
        id="linearGradient4337"
        xlink:href="#linearGradient3435-9-2"
@@ -476,11 +476,39 @@
        x2="88.54995"
        y1="166.26152"
        x1="85.196266"
-       gradientTransform="matrix(0.67524104,0,0,0.84923003,-201.50702,-403.3833)"
+       gradientTransform="matrix(0.675241,0,0,0.8803549,-201.50702,-403.53288)"
        gradientUnits="userSpaceOnUse"
        id="linearGradient4374"
        xlink:href="#linearGradient3435-2-5-3-7-8"
        inkscape:collect="always" />
+    <inkscape:perspective
+       id="perspective4459"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4494"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3374"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3426"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -492,16 +520,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="123.69881"
-     inkscape:cy="810.78374"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="259.07973"
+     inkscape:cy="895.15809"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1064"
      inkscape:window-height="759"
-     inkscape:window-x="157"
-     inkscape:window-y="148"
+     inkscape:window-x="138"
+     inkscape:window-y="97"
      showguides="true"
      inkscape:guide-bbox="true" />
   <metadata
@@ -516,25 +544,46 @@
     </rdf:RDF>
   </metadata>
   <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="bg"
+     sodipodi:insensitive="true">
+    <image
+       y="-60.506237"
+       x="-410.39474"
+       id="image4461"
+       height="631"
+       width="1280"
+       sodipodi:absref="/home/sky/projects/lisp/weblocks/site/bgtiled.png"
+       xlink:href="bgtiled.png" />
+  </g>
+  <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <rect
        style="opacity:0.98007968;fill:#435781;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect2497"
-       width="571.42859"
-       height="81.428566"
+       width="475.96918"
+       height="72.569847"
        x="3.7440214"
-       y="15.24396"
-       ry="4.2741103" />
+       y="24.10268"
+       ry="3.8091242"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/page/header.png"
+       inkscape:export-xdpi="150.06224"
+       inkscape:export-ydpi="150.06224" />
     <image
-       y="34.519161"
-       x="35.638275"
+       y="-34.166439"
+       x="38.279556"
        id="image3389"
-       height="42"
-       width="255"
+       height="35.1856"
+       width="213.62686"
        sodipodi:absref="/home/sky/projects/lisp/weblocks/site/pub/images/header/logo.png"
-       xlink:href="pub/images/header/logo.png" />
+       xlink:href="pub/images/header/logo.png"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/page/header.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       style="fill:#5a4242;fill-opacity:1;stroke:none;stroke-opacity:1" />
     <rect
        style="opacity:0.98007968;fill:#435781;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect2497-1"
@@ -544,7 +593,7 @@
        y="116.65275"
        ry="8.1329546" />
     <rect
-       style="opacity:0.98007968000000001;fill:url(#linearGradient3445);fill-opacity:1;fill-rule:nonzero;stroke:#d92b2b;stroke-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="opacity:0.98007968;fill:url(#linearGradient3445);fill-opacity:1;fill-rule:nonzero;stroke:#d92b2b;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect2497-1-0"
        width="122.86308"
        height="25.613462"
@@ -709,37 +758,243 @@
     <rect
        style="opacity:0.98007968;fill:#435781;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect2497-1-7"
-       width="120.49627"
+       width="113.35342"
        height="128.42332"
-       x="-197.39099"
+       x="-193.81956"
        y="175.29338"
        ry="3.356921" />
     <rect
-       style="opacity:0.98007968;fill:url(#linearGradient4279);fill-opacity:1;fill-rule:nonzero;stroke:#d92b2b;stroke-width:0.94833249;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="opacity:0.98007968;fill:url(#linearGradient4279);fill-opacity:1;fill-rule:nonzero;stroke:#d92b2b;stroke-width:0.9496085;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect2497-1-0-8"
-       width="101.16853"
-       height="27.974707"
-       x="-187.72713"
-       y="-217.98625"
-       ry="5.3591828"
-       transform="scale(1,-1)" />
+       width="101.16726"
+       height="28.050392"
+       x="-187.72649"
+       y="-217.98561"
+       ry="5.373682"
+       transform="scale(1,-1)"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/menu/button-selected.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
     <rect
        style="opacity:0.98007968;fill:url(#linearGradient4337);fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect2497-1-0-8-7"
        width="101.16853"
-       height="27.974707"
+       height="29"
        x="-187.60101"
-       y="-254.3992"
-       ry="5.3591828"
-       transform="scale(1,-1)" />
+       y="-252.3992"
+       ry="5.5556006"
+       transform="scale(1,-1)"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/menu/button-hover.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
     <rect
        style="opacity:0.98007968;fill:url(#linearGradient4374);fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect2497-1-0-0-9-8-8"
        width="101.16853"
-       height="27.974707"
+       height="29"
        x="-188.31528"
-       y="-290.16373"
-       ry="5.3591828"
-       transform="scale(1,-1)" />
+       y="-286.16373"
+       ry="5.5556006"
+       transform="scale(1,-1)"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/menu/button-normal.png"
+       inkscape:export-xdpi="150.34319"
+       inkscape:export-ydpi="150.34319" />
+    <text
+       xml:space="preserve"
+       style="font-size:18.41841888px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#5c5959;stroke-width:0.62142688px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter"
+       x="78.085869"
+       y="61.867176"
+       id="text3256"
+       sodipodi:linespacing="100%"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/page/header.png"
+       inkscape:export-xdpi="150.06224"
+       inkscape:export-ydpi="150.06224"><tspan
+         sodipodi:role="line"
+         id="tspan3258"
+         x="78.085869"
+         y="61.867176"
+         style="font-size:29.82849121px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6;stroke:#5c5959;stroke-width:0.62142688;stroke-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
+         dx="1.1235846 -1.1235846 -1.1235846 -0.3745282 -0.3745282 1.9761462e-10 -0.7490564">weblocks</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.53755093px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#5c5959;stroke-width:0.28805205px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter"
+       x="71.083801"
+       y="89.741898"
+       id="text3260"
+       sodipodi:linespacing="100%"
+       transform="scale(1.1309767,0.8841915)"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/page/header.png"
+       inkscape:export-xdpi="150.06224"
+       inkscape:export-ydpi="150.06224"><tspan
+         sodipodi:role="line"
+         id="tspan3262"
+         x="71.083801"
+         y="89.741898"
+         style="font-size:13.82649994px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6;stroke:#5c5959;stroke-width:0.28805205;stroke-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed">made with alien technology</tspan></text>
+    <g
+       id="g3278"
+       transform="matrix(0.6112604,0,0,0.6112604,98.305074,-11.223052)"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/page/header.png"
+       inkscape:export-xdpi="150.06224"
+       inkscape:export-ydpi="150.06224">
+      <rect
+         ry="0.30912423"
+         y="110.36218"
+         x="206.5"
+         height="9.5"
+         width="24.5"
+         id="rect3266"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="110.36218"
+         x="233.75"
+         height="9.5"
+         width="24.5"
+         id="rect3268"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="110.36218"
+         x="261.09924"
+         height="9.5"
+         width="24.5"
+         id="rect3270"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="98.144547"
+         x="220.55171"
+         height="9.5"
+         width="24.5"
+         id="rect3272"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="98.144547"
+         x="247.80171"
+         height="9.5"
+         width="24.5"
+         id="rect3274"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="85.770187"
+         x="233.82317"
+         height="9.5"
+         width="24.5"
+         id="rect3276"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <rect
+       style="opacity:0.98007968;fill:#435781;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3286"
+       width="571.42859"
+       height="72.569847"
+       x="9.8563366"
+       y="-173.27635"
+       ry="3.8091242"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/page/header.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:18.41841888px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#5c5959;stroke-width:0.62142688px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter"
+       x="118.84642"
+       y="-136.21896"
+       id="text3288"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3290"
+         x="118.84642"
+         y="-136.21896"
+         style="font-size:29.82849121px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6;stroke:#5c5959;stroke-width:0.62142688;stroke-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
+         dx="1.1235846 -1.1235846 -1.1235846 -0.3745282 -0.3745282 1.9761462e-10 -0.7490564">weblocks</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.56950235px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#5c5959;stroke-width:0.25539064px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter"
+       x="121.39406"
+       y="-120.84933"
+       id="text3292"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3294"
+         x="121.39406"
+         y="-120.84933"
+         style="font-size:12.25875187px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6;stroke:#5c5959;stroke-width:0.25539064;stroke-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed">built on alien technology</tspan></text>
+    <g
+       id="g3296"
+       transform="matrix(0.8732115,0,0,0.8732115,-147.53444,-227.40317)">
+      <rect
+         ry="0.30912423"
+         y="110.36218"
+         x="206.5"
+         height="9.5"
+         width="24.5"
+         id="rect3298"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="110.36218"
+         x="233.75"
+         height="9.5"
+         width="24.5"
+         id="rect3300"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="110.36218"
+         x="261.09924"
+         height="9.5"
+         width="24.5"
+         id="rect3302"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="98.144547"
+         x="220.55171"
+         height="9.5"
+         width="24.5"
+         id="rect3304"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="98.144547"
+         x="247.80171"
+         height="9.5"
+         width="24.5"
+         id="rect3306"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0.30912423"
+         y="85.770187"
+         x="233.82317"
+         height="9.5"
+         width="24.5"
+         id="rect3308"
+         style="opacity:0.98007968;fill:#db1f1f;fill-opacity:1;fill-rule:nonzero;stroke:#cac3c3;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <image
+       y="135.93965"
+       x="165.20384"
+       id="image3376"
+       height="44.726391"
+       width="49.434429"
+       sodipodi:absref="/home/sky/projects/lisp/weblocks/site/weblocks-alien.png"
+       xlink:href="weblocks-alien.png"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/page/header.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <image
+       y="37.865696"
+       x="17.145397"
+       id="image3428"
+       height="45.432529"
+       width="50.480591"
+       sodipodi:absref="/home/sky/projects/lisp/weblocks/site/weblocks-alien-small.png"
+       xlink:href="weblocks-alien-small.png"
+       inkscape:export-filename="/home/sky/projects/lisp/weblocks/site/pub/images/page/header.png"
+       inkscape:export-xdpi="150.06224"
+       inkscape:export-ydpi="150.06224" />
   </g>
 </svg>

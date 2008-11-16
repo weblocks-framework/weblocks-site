@@ -1,24 +1,29 @@
 
 .menu
 {
-  width: 15em;
-  background: #d8eaf8 url(/weblocks-common/pub/images/menu/top_background.png) repeat-x;
+  width:174px;
+  background: #435781 url(/pub/images/menu/lisp-logo.png) repeat-x center 95%;
+  color:#efefef;
+  font-size:160.01%;
+  float:left;
+  padding:0.75em;
+  padding-bottom:9em;
+  -moz-border-radius:7px;
+  -webkit-border-radius:7px;
 }
 
-.menu h1
-{
-  background: #d8eaf8;
+.menu ul {
+  border:0;
 }
 
-.menu .extra-top-1
+.menu h1, .menu .extra-top-1,
+.menu h1, .menu .extra-top-2,
+.menu h1, .menu .extra-top-3,
+.menu h1, .menu .extra-bottom-1,
+.menu h1, .menu .extra-bottom-2,
+.menu h1, .menu .extra-bottom-3
 {
-  background: url(/weblocks-common/pub/images/menu/top_left.png) no-repeat top left;
-}
-
-.menu .extra-top-2
-{
-  background: url(/weblocks-common/pub/images/menu/top_right.png) no-repeat top right;
-  border-bottom-color: #bfd9ec;
+  display:none;
 }
 
 .empty-menu
@@ -28,52 +33,40 @@
 
 .selected-item
 {
-  color: #606060;
-  background-color: #bfd9ec;
+  color: #fff;
+}
+
+.menu ul li a {
+  font-family:Bitstream Vera Sans,Trebuchet MS,sans-serif;
+  display:block;
+  width:100%;
+  height:48px;
+  background:transparent url(/pub/images/menu/button-normal.png) no-repeat;
+  color:#efefef;
+  text-decoration:none;
+  padding-left:0.5em;
+  line-height:2.5em;
 }
 
 .menu ul li
 {
   padding-left: 0;
+  border:0;
+  margin:0.5em 0;
+}
+
+.menu ul li a:hover {
+  background:transparent url(/pub/images/menu/button-hover.png) no-repeat;
 }
 
 .menu ul li.selected-item
 {
   padding-left: 0.5em;
-}
-
-.menu ul li.selected-item span
-{
-  background: url(/weblocks-common/pub/images/menu/arrow.png) no-repeat center left;
-  padding-left: 1em;
-}
-
-.menu h1, .view .empty-menu, .menu ul li
-{
-  border-top-color: #f6fbfd;
-  border-bottom-color: #bfd9ec;
-}
-
-.menu h1, .menu .empty-menu, .menu ul
-{
-  border-left-color: #bfd9ec;
-  border-right-color: #bfd9ec;
-}
-
-.menu .extra-bottom-1
-{
-  background: url(/weblocks-common/pub/images/menu/bottom_background.png) repeat-x top;
-  border-top-color: #f6fbfd;
-}
-
-.menu .extra-bottom-2
-{
-  background: url(/weblocks-common/pub/images/menu/bottom_left.png) no-repeat top left;
-}
-
-.menu .extra-bottom-3
-{
-  background: url(/weblocks-common/pub/images/menu/bottom_right.png) no-repeat top right;
+  background:transparent url(/pub/images/menu/button-selected.png) no-repeat;
+  width:100%;
+  height:48px;
+  line-height:2.5em;
+  font-family:Bitstream Vera Sans,Trebuchet MS,sans-serif;
 }
 
 .menu a
@@ -92,3 +85,19 @@
   background-color: #bfd9ec;
 }
 
+.navigation-body {
+  float:right;
+  max-width:550px;
+  padding-right:0.5em;
+  padding-bottom:4em;
+}
+
+h3 {
+  font-size:170.01%;
+  margin-top:30px
+}
+
+.navigation-body p {
+  font-size:145.01%;
+  font-family:serif;
+}

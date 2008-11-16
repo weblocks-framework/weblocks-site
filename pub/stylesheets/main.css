@@ -3,6 +3,7 @@ body
 {
   font-size: small;
   font-family: arial, helvetica, sans-serif;
+  min-height:750px;
 }
 
 a
@@ -12,7 +13,7 @@ a
 
 .view
 {
-  background: #ecf8d7 url(/weblocks-common/pub/images/widget/top_background.png) repeat-x;
+  background: #ecf8d7 url(/weblocks-common/pub/images/page/bgtiled.png) repeat;
   margin-bottom: 1em;
   _height: 0; /* IE specific hasLayout fix */
 }
@@ -81,6 +82,19 @@ h1, h2
   color: #29364F;
   font-weight: bold;
   font-family: Garamond, New York, serif;
+}
+
+h2 {
+  font-size:280.01%;
+  text-align:right;
+
+  border-bottom:1px solid gray;
+
+  margin-top:5px;
+  margin-left:10em;
+
+  padding-top:5px;
+  padding-bottom:10px;
 }
 
 .view h1 .action, .view fieldset h1 .action
