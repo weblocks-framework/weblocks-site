@@ -86,12 +86,12 @@ h1, h2
 
 h2 {
   font-size:280.01%;
-  text-align:right;
+  text-align:left;
 
   border-bottom:1px solid gray;
 
   margin-top:5px;
-  margin-left:10em;
+  /*padding-left:2em;*/
 
   padding-top:5px;
   padding-bottom:10px;
@@ -250,3 +250,14 @@ div.empty p span.caption
   font-family: Garamond, New York, serif;
 }
 
+ul.anchors {
+  padding-left:1em;
+}
+
+ul.anchors li {
+  list-style: none;
+  margin:0.4ex 0;
+}
+
+dt {
+}
