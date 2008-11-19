@@ -127,14 +127,15 @@
 (defun make-installation-page ()
   (make-page "Getting started"
     (:p "There are several ways to install Common Lisp and Weblocks.")
-    (:p "This page shows what we think is the best way for a beginner
-        to get started.")
+    (:h3 "Using clbuild")
+    (:p "clbuild is the best way for a beginner to get started.")
+    (:p "Perform the following steps:")
     (:ol
       (:li "Download clbuild")
       (:li "Use clbuild to build SBCL and install Weblocks")
       (:li "Run the demo to test your installation")
       (:li "Set up a working environment"))
-    (:h3 "Advanced users")
+    (:h3 "Manual setup")
       (:p "We have several Mercurial repositories at Bitbucket.")
       (:p "The two official ones are")
       (:dl
@@ -142,7 +143,10 @@
         (:dd "weblocks-stable, a tree that is synced at stable release points and receives
              only important bug fixes in between.")
         (:dt (:a :href "http://www.bitbucket.org/S11001001/weblocks-dev/" "weblocks-dev"))
-        (:dd "weblocks-dev, the tree where all the latest action is."))))
+        (:dd "weblocks-dev, the tree where all the latest action is."))
+      (:p "Saikat Chakrabarti has written a "
+        (:a :href "http://slg.posterous.com/installing-weblocks" "step-by-step tutorial on
+            setting up SBCL and Weblocks from scratch on Darwin."))))
 
 (defun make-faq-page ()
   (make-page "FAQ"))
@@ -152,7 +156,7 @@
     (:h3 "Tutorials and blog posts")
     (:p "Some introductory material can be found on the old "
         (:a :href "http://trac.common-lisp.net/cl-weblocks/wiki/Tutorials" "Weblocks Trac wiki")
-        ". Most of these are slightly outdated and need some bits changed to make them
+        ". Some of these are slightly outdated and need some bits changed to make them
         work with the latest Weblocks code, though.")
 
     (:h3 "User guide")
@@ -161,24 +165,23 @@
         (:a :href "http://trac.common-lisp.net/cl-weblocks/wiki/UserManual" "quick guide")
         " in conjunction with community support and the source code documentation.")
     (:p "The " (:a :href "http://www.bitbucket.org/skypher/weblocks-stable/src/tip/test/" "tests")
-        " and the " (:a :href "http://www.bitbucket.org/skypher/weblocks-stable/src/tip/examples/"
-                        "examples")
+        " and the "
+        (:a :href "http://www.bitbucket.org/skypher/weblocks-stable/src/tip/examples/" "examples")
         " are also helpful.")
 
     (:h3 "API documentation")
     (:p "The latest auto-generated API documentation for the stable branch
         can be found at " (:a :href *doc-uri*
-                                    *doc-uri*))
+                                    (esc *doc-uri*)))
              
     (:h3 "Development process")
-    (:ul
-      (:dl
-        (:dt "Submitting patches, working with the repositories")
-        (:dd (:a :href "http://trac.common-lisp.net/cl-weblocks/wiki/WeblocksDevelopment"
-                 "http://trac.common-lisp.net/cl-weblocks/wiki/WeblocksDevelopment"))
-        (:dt "Working with the test framework")
-        (:dd (:a :href "http://groups.google.com/group/weblocks/msg/b25cbcd1398a91cc"
-                 "http://groups.google.com/group/weblocks/msg/b25cbcd1398a91cc"))))))
+    (:dl
+      (:dt "Submitting patches, working with the repositories")
+      (:dd (:a :href "http://trac.common-lisp.net/cl-weblocks/wiki/WeblocksDevelopment"
+               "http://trac.common-lisp.net/cl-weblocks/wiki/WeblocksDevelopment"))
+      (:dt "Working with the test framework")
+      (:dd (:a :href "http://groups.google.com/group/weblocks/msg/b25cbcd1398a91cc"
+               "http://groups.google.com/group/weblocks/msg/b25cbcd1398a91cc")))))
 
 (defun make-community-page ()
   (make-page "Community"
@@ -194,7 +197,7 @@
                      (:div :class "navigation-body"
                            (call-next-method)))))
   (apply #'render-navigation-menu obj args)
-  (format *weblocks-output-stream* body-html)))
+  (write body-html :stream *weblocks-output-stream*)))
 
 (defun init-user-session (comp)
   (setf (composite-widgets comp)
