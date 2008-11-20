@@ -11,7 +11,7 @@
 (defwebapp weblocks-site
            :description "Weblocks web application framework"
            :prefix "/"
-           :public-files-path "./pub")
+           :public-files-path "./pub/")
 
 (defmacro make-page (title &body body)
   `(lambda ()
