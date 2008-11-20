@@ -99,10 +99,19 @@ h3 {
 
 .navigation-body p,
 .navigation-body ul,
-.navigation-body dl
+.navigation-body dl,
+.navigation-body ol
 {
   font-size:145.01%;
   font-family:serif;
+}
+
+.navigation-body ol ul {
+  font-size:inherit;
+}
+
+.navigation-body ol li {
+  margin:15px;
 }
 
 .navigation-body dl {
@@ -115,7 +124,8 @@ h3 {
 }
 
 .navigation-body ul li,
-.navigation-body dl dd
+.navigation-body dl dd,
+.navigation-body ol dd
 {
   margin:10px;
 }
@@ -123,4 +133,9 @@ h3 {
 a:active, a:focus {
   outline:0;
   -moz-outline-style: none;
+}
+
+pre {
+  background-color:LightBlue;
+  padding:1ex;
 }

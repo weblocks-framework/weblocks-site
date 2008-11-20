@@ -128,13 +128,35 @@
   (make-page "Getting started"
     (:p "There are several ways to install Common Lisp and Weblocks.")
     (:h3 "Using clbuild")
-    (:p "clbuild is the best way for a beginner to get started.")
+    (:p (:a :href "http://common-lisp.net/project/clbuild/" "clbuild")
+        " is the easiest way to get started with Weblocks.")
     (:p "Perform the following steps:")
     (:ol
-      (:li "Download clbuild")
-      (:li "Use clbuild to build SBCL and install Weblocks")
-      (:li "Run the demo to test your installation")
-      (:li "Set up a working environment"))
+      (:li (:strong "Prepare your clbuild installation")
+           " as described on the clbuild homepage.")
+      (:li
+        (:p :style "font-size:inherit" (:strong "Get SBCL."))
+        (:ul
+          (:li "Darwin users: build " (:a :href "http://www.sbcl.org/" "SBCL")
+               " from source with thread support.")
+          (:li "GNU/Linux users: install your distribution's SBCL or let clbuild"
+               " build the latest version from CVS:"
+               (:pre "./clbuild compile-implementation sbcl"))))
+      (:li "Use clbuild to " (:strong "install Weblocks and cl-prevalence") ": "
+           (:pre "./clbuild install weblocks cl-prevalence")
+           " (note: cl-prevalence is required by the demo)")
+      (:li (:strong "Run SBCL") " with clbuild: " (:pre "./clbuild lisp"))
+      (:li (:strong "Load the demo") ": " (:pre "CL-USER> (asdf:oos 'asdf:load-op 'weblocks-demo)"))
+      (:li (:strong "Start the demo") ": " (:pre "CL-USER> (weblocks-demo:start-weblocks-demo "
+                                                 (str (format nil "~%"))
+                                                 "                                 :port 3455)")
+           " (replace 3455 with some port that is currently not in use on your system)")
+      (:li (:strong "Check out the demo") " by pointing your browser at "
+           (:pre "http://localhost:3455/weblocks-demo"))
+      (:li "Use the demo as a starting point for " (:strong "your own application")
+           " or generate a new base application named NAME in an existing directory DIR"
+           " by issuing"
+           (:pre "CL-USER> (wop:make-app 'NAME \"DIR\")")))
     (:h3 "Manual setup")
       (:p "We have several Mercurial repositories at Bitbucket.")
       (:p "The two official ones are")
@@ -197,7 +219,11 @@
                      (:div :class "navigation-body"
                            (call-next-method)))))
   (apply #'render-navigation-menu obj args)
-  (write body-html :stream *weblocks-output-stream*)))
+  (write body-html :stream *weblocks-output-stream* :escape nil)))
+
+(defmethod page-title ((app weblocks-site))
+  (declare (special *current-page-description*))
+  (format nil "Weblocks: ~A" (or *current-page-description* "")))
 
 (defun init-user-session (comp)
   (setf (composite-widgets comp)
