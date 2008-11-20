@@ -146,10 +146,10 @@
            (:pre "$ ./clbuild install weblocks cl-prevalence")
            " (note: cl-prevalence is required by the demo)")
       (:li (:strong "Run SBCL") " with clbuild: " (:pre "$ ./clbuild lisp"))
-      (:li (:strong "Load the demo") ": " (:pre "* (asdf:oos 'asdf:load-op 'weblocks-demo)"))
-      (:li (:strong "Start the demo") ": " (:pre "* (weblocks-demo:start-weblocks-demo "
-                                                 (str (format nil "~%"))
-                                                 "                                 :port 3455)")
+      (:li (:strong "Load the demo") ": "
+           (:pre "* (asdf:oos 'asdf:load-op 'weblocks-demo)"))
+      (:li (:strong "Start the demo") ": "
+           (:pre "* (weblocks-demo:start-weblocks-demo :port 3455)")
            " (replace 3455 with some port that is currently not in use on your system)")
       (:li (:strong "Check out the demo") " by pointing your browser at "
            (:pre "http://localhost:3455/weblocks-demo"))
