@@ -230,7 +230,7 @@
         (list (make-navigation "Main"
                                "Welcome" (make-welcome-page)
                                "Features" (make-features-page)
-                               "Getting started" (make-installation-page)
+                               "Start!" (make-installation-page)
                                ;"FAQ" (make-faq-page)
                                "Documentation" (make-documentation-page)
                                "Community" (make-community-page)))))
