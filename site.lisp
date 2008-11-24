@@ -68,6 +68,11 @@
                 and keeps it state between requests")
             (:p "This simplifies information book-keeping and code re-use."))
 
+          (add-feature "Newbie-friendly"
+            (:p "We try hard to make Weblocks easy to use and install.")
+            (:p "Our community helps beginners to get behind any obstacles
+                they might face."))
+
           (add-feature "Create multiple views of an object"
             (:p "Weblocks view language lets you specify a view of an object
                 in a declarative manner. You can build customized forms and tables
@@ -207,10 +212,21 @@
 
 (defun make-community-page ()
   (make-page "Community"
-    (:h3 "Discussion")
+    (:h3 "Weblocks")
     (:p "The " (:a :href "http://groups.google.com/group/weblocks/" "Weblocks Group")
         " is the central place to get help and discuss development of Weblocks.")
-    (:p "You can get free support and talk about bugs and features there.")))
+    (:p "You can get free support and talk about bugs and features there.")
+
+    (:h3 "Common Lisp")
+    (:h2 "LispForum")
+    (:p (:a :href "http://www.lispforum.com/" "LispForum") "is a suitable place
+        for beginners to get help with Common Lisp problems and questions.")
+    
+    (:h2 "comp.lang.lisp")
+    (:p "This newsgroup is the classic place to discuss all things pertaining to
+        Common Lisp. You can access it with a newsreader or "
+        (:a :href "http://groups.google.com/group/comp.lang.lisp" "via Google Groups") ".")
+    (:p "It's not for the faint of heart, however.")))
 
 (defmethod render-widget-body ((obj navigation) &rest args)
   ;; we just cheat a bit until the new dispatching/rendering separation
