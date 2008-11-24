@@ -2,10 +2,16 @@
 .menu
 {
   width:174px;
+  min-height:350px;
+
   background: #435781 url(/pub/images/menu/lisp-logo.png) repeat-x center 95%;
+
   color:#efefef;
-  font-size:160.01%;
+  font-size:15px;
+  font-weight:bolder;
+
   float:left;
+
   padding:0.75em;
   padding-bottom:9em;
   -moz-border-radius:7px;
@@ -45,7 +51,7 @@
   color:#efefef;
   text-decoration:none;
   padding-left:0.5em;
-  line-height:2.5em;
+  line-height:3.2em;
 }
 
 .menu ul li
@@ -65,7 +71,7 @@
   background:transparent url(/pub/images/menu/button-selected.png) no-repeat;
   width:100%;
   height:48px;
-  line-height:2.5em;
+  line-height:3.2em;
   font-family:Bitstream Vera Sans,Trebuchet MS,sans-serif;
 }
 
