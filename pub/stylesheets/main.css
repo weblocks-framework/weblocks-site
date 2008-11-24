@@ -97,6 +97,11 @@ h2 {
   padding-bottom:10px;
 }
 
+h4 {
+    font-size:160.01%;
+    margin-bottom:0;
+}
+
 .view h1 .action, .view fieldset h1 .action
 {
   display: none;
