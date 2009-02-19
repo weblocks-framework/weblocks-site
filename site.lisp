@@ -102,7 +102,7 @@
           (add-feature "Macros: complete realization of DRY"
             (:p (:em "Don’t Repeat Yourself") " is one of the core principles of
                 Agile Development.")
-            (:p "Languages without macros of with insufficiently advanced
+            (:p "Languages without macros or with insufficiently advanced
                 macros cannot avoid large parts of code redundancy. By relying
                 on Common Lisp Weblocks offers the user the full power
                 of code transformation."))
