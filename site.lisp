@@ -29,7 +29,7 @@
     (:p "Weblocks is well-tested and has proven its worth in daily usage. It is used
         by a community of developers all over the world.")
     (:p "Public applications running Weblocks include "
-        (:a :href "http://www.lamsight.org" "LAMsight") " and "
+        (:a :href "http://www.lamsight.org" "LAMSIGHT2") " and "
         (:a :href "http://www.thanandar.de" "Thanandar") ".")
 
     (:h3 "Why yet another web framework?")
