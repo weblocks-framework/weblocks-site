@@ -24,6 +24,14 @@
     (:p "Weblocks is an advanced web framework written in Common Lisp.")
     (:p "It is designed to make Agile web application development as
         effective and simple as possible.")
+
+    (:h3 "Is it usable? Can I see some demos?")
+    (:p "Weblocks is well-tested and has proven its worth in daily usage. It is used
+        by a community of developers all over the world.")
+    (:p "Public applications running Weblocks include "
+        (:a :href "http://www.lamsight.org" "LAMsight") " and "
+        (:a :href "http://www.thanandar.de" "Thanandar") ".")
+
     (:h3 "Why yet another web framework?")
     (:p "This is not your ordinary run-of-the-mill web framework in PHP, Python or Ruby.")
     (:p "Weblocks uses powerful Lisp features like multiple dispatch, the metaobject protocol,
@@ -32,6 +40,7 @@
         expressed using continuations.")
     (:p "Things that are hard or mundane in other frameworks become easy and fun in
         Weblocks.")
+
     (:h3 "In Common Lisp?")
     (:p "Common Lisp is a powerful standardized language with high-performance implementations.")
     (:p "Weblocks makes use of several advanced features that cannot be found
