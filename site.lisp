@@ -196,8 +196,8 @@
         work with the latest Weblocks code, though.")
 
     (:h3 "User guide")
-    (:p "A real manual will be available in December 2008 or January 2009.
-        Until then please use the "
+    (:p "An early manual draft is " (:a :href "http://viridian-project.de/~sky/user-guide.stx.html" "available") ".")
+    (:p "Additionally please use the "
         (:a :href "http://trac.common-lisp.net/cl-weblocks/wiki/UserManual" "quick guide")
         " in conjunction with community support and the source code documentation.")
     (:p "The " (:a :href "http://www.bitbucket.org/skypher/weblocks-stable/src/tip/test/" "tests")
@@ -225,6 +225,8 @@
     (:p "The " (:a :href "http://groups.google.com/group/weblocks/" "Weblocks Group")
         " is the central place to get help and discuss development of Weblocks.")
     (:p "You can get free support and talk about bugs and features there.")
+    (:p "For " (:b "professional") " support please contact "
+        (:a :href "mailto:polzer@stardawn.org" "Leslie P. Polzer") ".")
 
     (:h3 "Common Lisp")
     (:h4 "LispForum")
