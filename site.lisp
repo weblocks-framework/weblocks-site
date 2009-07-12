@@ -126,9 +126,9 @@
                 anything about continuations. Just use the high-level
                 API provided by Weblocks to direct your control flow."))
 
-          (add-feature "Thin JavaScript layer"
-            (:p "Thanks to Weblocks' thin JavaScript layer your content degrades gracefully
-                on clients that don't have JavaScript enabled.")
+          (add-feature "Thin Javascript layer"
+            (:p "Thanks to Weblocks' thin Javascript layer your content degrades gracefully
+                on clients that don't have Javascript enabled.")
             (:p "Features like fully sortable tables use AJAX when available but
                 also offer the same user experience without AJAX by making a normal
                 request.")
