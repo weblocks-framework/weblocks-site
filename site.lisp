@@ -126,9 +126,9 @@
                 anything about continuations. Just use the high-level
                 API provided by Weblocks to direct your control flow."))
 
-          (add-feature "Thin JavaScript layer"
-            (:p "Thanks to Weblocks' thin JavaScript layer your content degrades gracefully
-                on clients that don't have JavaScript enabled.")
+          (add-feature "Thin Javascript layer"
+            (:p "Thanks to Weblocks' thin Javascript layer your content degrades gracefully
+                on clients that don't have Javascript enabled.")
             (:p "Features like fully sortable tables use AJAX when available but
                 also offer the same user experience without AJAX by making a normal
                 request.")
@@ -196,8 +196,8 @@
         work with the latest Weblocks code, though.")
 
     (:h3 "User guide")
-    (:p "A real manual will be available in December 2008 or January 2009.
-        Until then please use the "
+    (:p "An early manual draft is " (:a :href "http://viridian-project.de/~sky/user-guide.stx.html" "available") ".")
+    (:p "Additionally please use the "
         (:a :href "http://trac.common-lisp.net/cl-weblocks/wiki/UserManual" "quick guide")
         " in conjunction with community support and the source code documentation.")
     (:p "The " (:a :href "http://www.bitbucket.org/skypher/weblocks-stable/src/tip/test/" "tests")
@@ -225,6 +225,8 @@
     (:p "The " (:a :href "http://groups.google.com/group/weblocks/" "Weblocks Group")
         " is the central place to get help and discuss development of Weblocks.")
     (:p "You can get free support and talk about bugs and features there.")
+    (:p "For professional support please contact "
+        (:a :href "mailto:polzer@stardawn.org" "Leslie P. Polzer") ".")
 
     (:h3 "Common Lisp")
     (:h4 "LispForum")
