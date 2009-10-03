@@ -171,6 +171,14 @@
            " or generate a new base application named NAME in an existing directory DIR"
            " by issuing"
            (:pre "* (wop:make-app 'NAME \"DIR\")")))
+
+    (:h3 "Installer script")
+    (:p (:a :href "http://leftrightfold.com/" "Aaron Feng") " wrote a shell script"
+          " that lets you start a new Weblocks project from scratch; all you need is"
+          " an installed SBCL.")
+    (:p "Get it here: " (:a :href "http://github.com/aaronfeng/weblocks-install/"
+                            "http://github.com/aaronfeng/weblocks-install/"))
+
     (:h3 "Manual setup")
       (:p "We have several Mercurial repositories at Bitbucket.")
       (:p "The two official ones are")
