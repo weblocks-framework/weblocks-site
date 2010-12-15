@@ -79,7 +79,7 @@
 
           (add-feature "Newbie-friendly"
             (:p "We try hard to make Weblocks easy to use and install.")
-            (:p "Our community helps beginners to get behind any obstacles
+            (:p "Our community helps beginners to get past any obstacles
                 they might face."))
 
           (add-feature "Create multiple views of an object"
@@ -141,25 +141,16 @@
 (defun make-installation-page ()
   (make-page "Getting started"
     (:p "There are several ways to install Common Lisp and Weblocks.")
-    (:h3 "Using clbuild")
-    (:p (:a :href "http://common-lisp.net/project/clbuild/" "clbuild")
+    (:h3 "Using Quicklisp")
+    (:p (:a :href "http://www.quicklisp.org/" "Quicklisp")
         " is the easiest way to get started with Weblocks.")
     (:p "Perform the following steps:")
     (:ol
-      (:li (:strong "Prepare your clbuild installation")
-           " as described on the clbuild homepage.")
-      (:li
-        (:p :style "font-size:inherit" (:strong "Get SBCL."))
-        (:ul
-          (:li "Darwin users: build " (:a :href "http://www.sbcl.org/" "SBCL")
-               " from source with thread support.")
-          (:li "GNU/Linux users: install your distribution's SBCL or let clbuild"
-               " build the latest version from CVS:"
-               (:pre "$ ./clbuild compile-implementation sbcl"))))
-      (:li "Use clbuild to " (:strong "install Weblocks and cl-prevalence") ": "
-           (:pre "$ ./clbuild install weblocks cl-prevalence")
-           " (note: cl-prevalence is required by the demo)")
-      (:li (:strong "Run SBCL") " with clbuild: " (:pre "$ ./clbuild lisp"))
+      (:li (:strong "Install SBCL or CCL."))
+      (:li (:strong "Run SBCL or CCL and load Quicklisp")
+           ": this is described on the Quicklisp page.")
+      (:li (:strong "Install Weblocks")
+           ": this is described on the Quicklisp page as well.")
       (:li (:strong "Load the demo") ": "
            (:pre "* (asdf:oos 'asdf:load-op 'weblocks-demo)"))
       (:li (:strong "Start the demo") ": "
