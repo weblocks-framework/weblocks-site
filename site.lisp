@@ -171,15 +171,9 @@
                             "http://github.com/aaronfeng/weblocks-install/"))
 
     (:h3 "Manual setup")
-      (:p "We have several Mercurial repositories at Bitbucket.")
-      (:p "The two official ones are")
-      (:dl
-        (:dt (:a :href "http://www.bitbucket.org/skypher/weblocks-stable/" "weblocks-stable"))
-        (:dd "weblocks-stable, a tree that is synced at stable release points and receives
-             only important bug fixes in between.")
-        (:dt (:a :href "http://www.bitbucket.org/S11001001/weblocks-dev/" "weblocks-dev"))
-        (:dd "weblocks-dev, the tree where all the latest action is."))
-      (:p "Saikat Chakrabarti has written a "
+    (:p "We have repository at Github. -"
+     (:a :href "https://github.com/skypher/weblocks" "weblocks-stable"))
+    (:p "Saikat Chakrabarti has written a "
         (:a :href "http://slg.posterous.com/installing-weblocks" "step-by-step tutorial on
             setting up SBCL and Weblocks from scratch on Darwin."))))
 
@@ -199,9 +193,9 @@
     (:p "Additionally please use the "
         (:a :href "http://trac.common-lisp.net/cl-weblocks/wiki/UserManual" "quick guide")
         " in conjunction with community support and the source code documentation.")
-    (:p "The " (:a :href "http://www.bitbucket.org/skypher/weblocks-stable/src/tip/test/" "tests")
+    (:p "The " (:a :href "https://github.com/skypher/weblocks/tree/master/test" "tests")
         " and the "
-        (:a :href "http://www.bitbucket.org/skypher/weblocks-stable/src/tip/examples/" "examples")
+        (:a :href "https://github.com/skypher/weblocks/tree/master/examples" "examples")
         " are also helpful.")
 
     (:h3 "API documentation")
