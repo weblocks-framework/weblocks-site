@@ -172,7 +172,7 @@
 
     (:h3 "Manual setup")
     (:p "We have repository at Github. - "
-     (:a :href "https://github.com/skypher/weblocks" "weblocks"))
+     (:a :href "https://github.com/skypher/weblocks" "https://github.com/skypher/weblocks"))
     (:p "Saikat Chakrabarti has written a "
         (:a :href "http://slg.posterous.com/installing-weblocks" "step-by-step tutorial on
             setting up SBCL and Weblocks from scratch on Darwin."))))
