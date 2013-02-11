@@ -171,8 +171,8 @@
                             "http://github.com/aaronfeng/weblocks-install/"))
 
     (:h3 "Manual setup")
-    (:p "We have repository at Github. -"
-     (:a :href "https://github.com/skypher/weblocks" "weblocks-stable"))
+    (:p "We have repository at Github. - "
+     (:a :href "https://github.com/skypher/weblocks" "weblocks"))
     (:p "Saikat Chakrabarti has written a "
         (:a :href "http://slg.posterous.com/installing-weblocks" "step-by-step tutorial on
             setting up SBCL and Weblocks from scratch on Darwin."))))
