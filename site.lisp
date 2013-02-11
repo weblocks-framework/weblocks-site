@@ -73,7 +73,7 @@
 
           (add-feature "Think and code in high-level abstractions"
             (:p "A web page in Weblocks consists of building blocks called "
-                (:em "widgets") ". Every widgets knows how to render itself
+                (:em "widgets") ". Every widget knows how to render itself
                 and keeps it state between requests")
             (:p "This simplifies information book-keeping and code re-use."))
 
