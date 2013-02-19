@@ -1,0 +1,128 @@
+
+
+// ================ Navs
+
+.nav-sidebar-menu {
+  .column(2);
+  //background: @btnBackgroundHighlight;
+}
+
+.nav-sidebar-menu > ul > li > a, .nav-sidebar-menu > ul > li.disabled {
+  border: 1px solid @tableBorder;
+  margin: 0 -15px -1px -15px;
+  padding: 8px 14px;
+}
+
+.nav-sidebar-menu > ul > li.disabled {
+  background: @bodyBackground;
+}
+
+.nav-sidebar-menu > ul > li:first-child > a {
+  .border-top-radius(6px);
+}
+
+.nav-sidebar-menu > ul > li:last-child > a {
+  .border-bottom-radius(6px);
+}
+
+.nav-sidebar-body {
+  .column(9.5);
+  .push(0.5);
+}
+
+
+// ================ Forms
+
+.control-label {
+  color: @blueDark;
+}
+
+.form-horizontal-condensed .control-group {
+  margin-bottom: 0px;
+}
+
+.validation-errors-summary .error-count,
+.validation-errors-summary .field-validation-errors {
+  display: none;
+}
+
+.validation-errors-summary ul li {
+  font-style: italic;
+  color: red;
+  display: block;
+}
+
+legend .action {
+  display: none;
+}
+
+.control-group .help-inline {
+  margin-left: 160px;
+  font-style: italic;
+}
+
+
+// ================ Tables
+
+/* Mining Bar */
+.dataseq .data-mining-bar {
+  position: relative;
+  margin-bottom: 0.25em;
+  height: 1em;
+}
+
+.dataseq .data-mining-bar .caption {
+  font-size: 120%;
+  color: @blueDark;
+  font-weight: bold;
+}
+
+.dataseq > .data-mining-bar {
+  height: auto;
+  min-height: 1em;
+}
+
+.dataseq .data-mining-bar .total-items {
+  color: @gray;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+// No need to use 'nth-child' (which may not work in all browsers)
+// since the Lisp code will put this class on alternate rows for us.
+.table-striped-row {
+
+  background-color: @tableBackgroundAccent;
+}
+
+
+// ================ Progress bar
+
+#ajax-progress
+{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+
+// ================ Weblocks.net customizations
+
+// @linkColor and @linkColorHover are, alas, used for other things as well, so
+// I can't get the effect I want by just changing them.
+
+a {
+  color: saturate(lighten(@linkColor, 15%), 15%);
+  text-decoration: none;
+}
+a:hover {
+  color: saturate(lighten(@linkColorHover, 15%), 15%);
+  text-decoration: underline;
+}
+
+body {
+  background: #f4fbe8;
+}
