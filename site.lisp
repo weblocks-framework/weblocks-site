@@ -1,12 +1,7 @@
-(push "/home/sky/weblocks/" asdf:*central-registry*)
-
-(asdf:oos 'asdf:load-op 'weblocks)
-
-(defpackage #:weblocks-site (:use :cl :weblocks :cl-who :f-underscore))
 
 (in-package :weblocks-site)
 
-(defparameter *doc-uri* "http://viridian-project.de/~sky/weblocks-stable/docs/gen/weblocks-package/")
+(defparameter *doc-uri* "http://weblocks.net/docs/gen/weblocks-package/")
 
 (defwebapp weblocks-site
            :description "Weblocks web application framework"
@@ -14,10 +9,12 @@
            :public-files-path "./pub/")
 
 (defmacro make-page (title &body body)
-  `(lambda ()
-     (with-html
-       (:h2 (esc ,title))
-       ,@body)))
+  `(make-widget
+     (lambda (&rest stuff)
+       (declare (ignore stuff))
+       (with-html
+	 (:h2 (esc ,title))
+	 ,@body))))
 
 (defun make-welcome-page ()
   (make-page "Welcome to Weblocks"
@@ -29,8 +26,9 @@
     (:p "Weblocks is well-tested and has proven its worth in daily usage. It is used
         by a community of developers all over the world.")
     (:p "Public applications running Weblocks include "
-        (:a :href "http://www.lamsight.org" "LAMSIGHT2") " and "
-        (:a :href "http://www.thanandar.de" "Thanandar") ".")
+        (:a :href "http://www.lamsight.org" "LAMSIGHT2") ", "
+        (:a :href "http://www.thanandar.de" "Thanandar") ", and "
+	(:a :href "https://bountyoss.com/" "BountyOSS") ".")
 
     (:h3 "Why yet another web framework?")
     (:p "This is not your ordinary run-of-the-mill web framework in PHP, Python or Ruby.")
@@ -112,7 +110,7 @@
             (:p (:em "Don’t Repeat Yourself") " is one of the core principles of
                 Agile Development.")
             (:p "Languages without macros or with insufficiently advanced
-                macros cannot avoid large parts of code redundancy. By relying
+                macros cannot avoid large amounts of code redundancy. By relying
                 on Common Lisp Weblocks offers the user the full power
                 of code transformation."))
 
@@ -218,8 +216,8 @@
     (:p "The " (:a :href "http://groups.google.com/group/weblocks/" "Weblocks Group")
         " is the central place to get help and discuss development of Weblocks.")
     (:p "You can get free support and talk about bugs and features there.")
-    (:p "For professional support please contact "
-        (:a :href "mailto:polzer@stardawn.org" "Leslie P. Polzer") ".")
+;    (:p "For professional support please contact "
+;        (:a :href "mailto:polzer@stardawn.org" "Leslie P. Polzer") ".")
 
     (:h3 "Common Lisp")
     (:h4 "LispForum")
@@ -245,9 +243,11 @@
   (declare (special *current-page-description*))
   (format nil "Weblocks: ~A" (or *current-page-description* "")))
 
-(defun init-user-session (comp)
-  (setf (composite-widgets comp)
+(defun init-user-session (root-widget)
+  (setf (widget-prefix-fn root-widget) 'render-header)
+  (setf (widget-children root-widget)
         (list (make-navigation "Main"
+			       :navigation-class 'site-main-navigation
                                "Welcome" (make-welcome-page)
                                "Features" (make-features-page)
                                "Installation" (make-installation-page)
@@ -255,3 +255,20 @@
                                "Documentation" (make-documentation-page)
                                "Community" (make-community-page)))))
 
+(defun render-header (&rest args)
+  (declare (ignore args))
+  (with-html
+    (:div :class "container-fluid"
+	  (:div :class "row-fluid"
+		:style "margin-top: 10px; margin-bottom: 20px"
+		(:img :src "/pub/images/page/header.png")))))
+
+(defwidget site-main-navigation (navigation)
+  ())
+
+(defmethod render-navigation-menu ((nav site-main-navigation) &rest args)
+  (declare (ignore args))
+  (call-next-method)
+  (with-html
+    (:div :style "background: #435781; margin-top: 20px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"
+	  (:img :src "/pub/images/menu/lisp-logo.png"))))
