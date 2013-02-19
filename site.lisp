@@ -6,7 +6,8 @@
 (defwebapp weblocks-site
            :description "Weblocks web application framework"
            :prefix "/"
-           :public-files-path "./pub/")
+           :public-files-path "./pub/"
+           :dependencies (list (make-instance 'stylesheet-dependency :url "/pub/stylesheets/main.css")))
 
 (defmacro make-page (title &body body)
   `(make-widget
@@ -263,3 +264,13 @@
   (with-html
     (:div :style "background: #435781; margin-top: 20px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"
 	  (:img :src "/pub/images/menu/lisp-logo.png"))))
+
+(defmethod weblocks::render-navigation-styled :around ((nav navigation) (style-kind (eql ':sidebar)) (style-pos (eql ':left)) &rest args)
+  (with-html
+    (:div :class "container-fluid"
+     (:div :class "row-fluid"
+      (:div :class "nav-sidebar-menu span3"
+       (apply #'render-navigation-menu nav :menu-args
+              '(:list-class "nav nav-list") args))
+      (:div :class "nav-sidebar-body span8"
+       (apply #'weblocks::render-navigation-body nav args))))))
