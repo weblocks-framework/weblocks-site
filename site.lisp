@@ -230,15 +230,6 @@
         (:a :href "http://groups.google.com/group/comp.lang.lisp" "via Google Groups") ".")
     (:p "It's not for the faint of heart, however.")))
 
-(defmethod render-widget-body ((obj navigation) &rest args)
-  ;; we just cheat a bit until the new dispatching/rendering separation
-  ;; is ready for production
-  (let ((body-html (with-html-output-to-string (*weblocks-output-stream*)
-                     (:div :class "navigation-body"
-                           (call-next-method)))))
-  (apply #'render-navigation-menu obj args)
-  (write body-html :stream *weblocks-output-stream* :escape nil)))
-
 (defmethod page-title ((app weblocks-site))
   (declare (special *current-page-description*))
   (format nil "Weblocks: ~A" (or *current-page-description* "")))
