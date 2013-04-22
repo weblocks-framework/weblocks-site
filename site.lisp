@@ -19,7 +19,7 @@
        (:h2 (esc ,title))
        ,@body
        (:script :type "text/javascript"
-        "/*Preloading hover image*/ (new Image()).url = 'pub/images/menu/button-hover.png';"))))
+        "/*Preloading hover image*/ (new Image()).src = 'pub/images/menu/button-hover.png';"))))
 
 (defun make-welcome-page ()
   (make-page "Welcome to Weblocks"
