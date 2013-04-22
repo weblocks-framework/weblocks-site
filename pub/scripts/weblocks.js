@@ -4,6 +4,10 @@ function updateElementBody(element, newBody) {
     element.update(newBody);
 }
 
+function updateElement(element, newElement) {
+    element.replace(newElement);
+}
+
 function selectionEmpty() {
     if(document.getSelection) {
 	return document.getSelection() == "";
@@ -36,8 +40,8 @@ function stopPropagation(event) {
 // Register global AJAX handlers to show progress
 Ajax.Responders.register({
   onCreate: function() {
-	    $('ajax-progress').innerHTML = "<img src='/pub/images/progress.gif'>";
-	}, 
+	    $('ajax-progress').innerHTML = "<img src='pub/images/progress.gif'>";
+	},
   onComplete: function() {
 	    $('ajax-progress').innerHTML = "";
 	}
@@ -46,13 +50,9 @@ Ajax.Responders.register({
 function onActionSuccess(transport) {
     // Grab json value
     var json;
-    if(Prototype.Browser.WebKit) {
-	// We should sanitize JSON, but at the moment it crashes Safari
-        json = transport.responseText.evalJSON();
-    } else {
-        json = transport.responseText.evalJSON(true);
-    }
-    
+
+    json = transport.responseText.evalJSON(false);
+
     // See if there are redirects
     var redirect = json['redirect'];
     if (redirect)
@@ -60,7 +60,7 @@ function onActionSuccess(transport) {
 	window.location.href = redirect;
 	return;
     }
-    
+
     execJsonCalls(json['before-load']);
 
     // Update dirty widgets
@@ -69,7 +69,7 @@ function onActionSuccess(transport) {
 	var widget = $(i);
 	if(widget) {
             //console.log("updating widget %s", i);
-	    updateElementBody(widget, dirtyWidgets[i]);
+	    updateElement(widget, dirtyWidgets[i]);
 	}
     }
 
@@ -81,6 +81,7 @@ function execJsonCalls (calls) {
 	calls.each(function(item)
 			 {
 			     try {
+                                 //console.log("evalScript: %o", item);
                                  item.evalScripts();
 			     } catch(e) {
                                  //console.log("Error evaluating AJAX script %o: %s", item, e);
@@ -93,17 +94,33 @@ function onActionFailure() {
     alert('Oops, we could not complete your request because of an internal error.');
 }
 
+function onActionFailure(transport) {
+    document.getElementById('root').innerHTML=
+	'<div style="text-align: left">' +
+	transport.responseText
+	+ '</div>';
+}
+
 function getActionUrl(actionCode, sessionString, isPure) {
-    var url = location.href.sub(/\?.*/, "") + '?' + sessionString + '&action=' + actionCode;
-    if(isPure) {
-	url += '&pure=true';
-    }
+    if (!sessionString) sessionString = "";
+    var scriptName = location.protocol + "//"
+                   + location.hostname
+                   + (location.port ? ":" + location.port : "")
+                   + location.pathname;
+    var query = location.search;
+    var url = scriptName + query + (query ? "&" : "?")
+      + sessionString + (sessionString ? "&" : "") + "action=" + actionCode;
+
+    if(isPure)
+      url += '&pure=true';
+
     return url;
 }
 
-function initiateActionWithArgs(actionCode, sessionString, args, method) {
+function initiateActionWithArgs(actionCode, sessionString, args, method, url) {
     if (!method) method = 'get';
-    new Ajax.Request(getActionUrl(actionCode, sessionString),
+    if (!url) url = getActionUrl(actionCode, sessionString);
+    new Ajax.Request(url,
                      {
                          method: method,
                          onSuccess: onActionSuccess,
@@ -124,7 +141,7 @@ function initiateFormAction(actionCode, form, sessionString) {
     delete(serializedForm['action']);
 
     initiateActionWithArgs(actionCode, sessionString, serializedForm, form.method);
-} 
+}
 
 function disableIrrelevantButtons(currentButton) {
     $(currentButton.form).getInputs('submit').each(function(obj)
@@ -151,10 +168,10 @@ if(!window.XMLHttpRequest) {
 	    tableRows.each(function(row) {
 		    Event.observe(row, 'mouseover', function() {
 			    row.addClassName('hover');
-			}); 
+			});
 		    Event.observe(row, 'mouseout', function() {
 			    row.removeClassName('hover');
-			}); 
+			});
 		});
 	});
 }
@@ -183,10 +200,10 @@ function replaceDropdownWithSuggest(ignoreWelcomeMsg, inputId, inputName, choice
 	inputBox += 'value="' + value +'"';
     }
     inputBox += '/>';
-    
+
     var suggestHTML = inputBox + '<div id="' + choicesId + '" class="suggest"></div>';
     $(inputId).replace(suggestHTML);
-    
+
     declareSuggest(inputId, choicesId, suggestOptions);
 }
 
@@ -208,5 +225,67 @@ function include_dom(script_filename) {
   js.setAttribute('src', script_filename);
   html_doc.appendChild(js);
   return false;
+}
+
+/* working with CSS classes */
+function addClass(el,myClass){
+  if ((hasClass(el,myClass)) || (typeof el == 'undefined'))
+    return;
+  el.className += " " + myClass;
+}
+
+function removeClass(el,myClass){
+  if (typeof el=='undefined')
+    return;
+  if (el.getAttribute('class') === null)
+    return;
+
+  var classes = el.getAttribute('class').split(" ");
+  var result=[];
+
+  for (i=classes.length;i>=0;i--) {
+    if (classes[i] != myClass)
+      result.push(classes[i]);
+  }
+
+  el.setAttribute('class', result.join(" ")); /* FIXME: ie6/7 need className here */
+}
+
+function hasClass(el, myClass){
+  if ((el.className === null) || (typeof el == 'undefined'))
+    return false;
+
+  var classes = el.className.split(" ");
+
+  for (i=classes.length;i>=0;i--) {
+    if (classes[i] == myClass)
+      return true;
+  }
+
+  return false;
+}
+
+/* collapsible sections */
+function toggleExpandCollapse (heading,container) {
+  if (hasClass(heading,"collapsed")) {
+    removeClass(heading,"collapsed");
+    removeClass(container,"collapsed");
+    addClass(heading,"expanded");
+    addClass(container,"expanded");
+  } else {
+    removeClass(heading,"expanded");
+    removeClass(container,"expanded");
+    addClass(heading,"collapsed");
+    addClass(container,"collapsed");
+  }
+}
+
+function updateWidgetStateFromHash() {
+  // http://stackoverflow.com/questions/680785/on-window-location-hash-change
+  // TODO need to detect if the hash has been changed but the page hasn't been reloaded
+  // TODO only call this if the hash is actually different from the last recorded hash
+  var hash = window.location.hash;
+  if (hash)
+    initiateActionWithArgs(null, null, {'weblocks-internal-location-hash':hash}, "GET", "/");
 }
 
