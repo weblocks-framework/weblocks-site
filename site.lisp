@@ -221,7 +221,7 @@
         " is the central place to get help and discuss development of Weblocks.")
     (:p "You can get free support and talk about bugs and features there.")
     (:p "For professional support please contact "
-        (:a :href "mailto:polzer@stardawn.org" "Leslie P. Polzer") ".")
+        (:a :href "mailto:olexiy.z@gmail.com" "Olexiy A. Zamkoviy") ".")
 
     (:h3 "Common Lisp")
     (:h4 "LispForum")
