@@ -1,5 +1,3 @@
-(push "/home/sky/weblocks/" asdf:*central-registry*)
-
 (asdf:oos 'asdf:load-op 'weblocks)
 
 (defpackage #:weblocks-site (:use :cl :weblocks :cl-who :f-underscore))
@@ -19,7 +17,7 @@
        (:h2 (esc ,title))
        ,@body
        (:script :type "text/javascript"
-        "/*Preloading hover image*/ (new Image()).src = 'pub/images/menu/button-hover.png';"))))
+        "/*Preloading hover image*/ (new Image()).src = 'pub/images/menu/button-hover.png';(new Image()).src = 'pub/images/menu/button-selected.png';"))))
 
 (defun make-welcome-page ()
   (make-page "Welcome to Weblocks"
