@@ -4,7 +4,7 @@
 
 (in-package :weblocks-site)
 
-(defparameter *doc-uri* "http://viridian-project.de/~sky/weblocks-stable/docs/gen/weblocks-package/")
+(defparameter *doc-uri* "http://quickdocs.org/weblocks/api")
 
 (defwebapp weblocks-site
            :description "Weblocks web application framework"
@@ -189,7 +189,7 @@
         work with the latest Weblocks code, though.")
 
     (:h3 "User guide")
-    (:p "An early manual draft is " (:a :href "http://viridian-project.de/~sky/user-guide.stx.html" "available") ".")
+    (:p "An early manual draft is " (:a :href "/pub/user-guide.stx.html" "available") ".")
     (:p "Additionally please use the "
         (:a :href "http://trac.common-lisp.net/cl-weblocks/wiki/UserManual" "quick guide")
         " in conjunction with community support and the source code documentation.")
