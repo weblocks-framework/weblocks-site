@@ -11,11 +11,20 @@
            :prefix "/"
            :public-files-path "./pub/")
 
+(defun file-get-contents(file &key (external-format :utf-8))
+  (with-output-to-string (s)
+    (with-open-file (in file :direction :input :external-format external-format)
+      (loop for char = (read-char in nil) 
+            while char do
+            (write-char char s)))))
+
 (defmacro make-page (title &body body)
   `(lambda ()
      (with-html
        (:h2 (esc ,title))
        ,@body
+       (when (probe-file "all-pages-code")
+         (str (file-get-contents "all-pages-code")))
        (:script :type "text/javascript"
         "/*Preloading hover image*/ (new Image()).src = 'pub/images/menu/button-hover.png';(new Image()).src = 'pub/images/menu/button-selected.png';"))))
 
