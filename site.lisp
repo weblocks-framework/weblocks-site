@@ -242,6 +242,10 @@
          " - "
          (:br)
          (:a :target "_blank" :href "http://common-lisp.net/project/cl-weblocks/" "http://common-lisp.net/project/cl-weblocks/"))
+        (:p "There is a weblocks tutorial by " 
+         (:a :target "_blank" :href "https://github.com/aggieben" "Benjamin Collins")
+         " - "
+         (:a :target "_blank" :href "http://bloggoergosum.com/2009/02/12/a-simple-weblocks-application/"  "http://bloggoergosum.com/2009/02/12/a-simple-weblocks-application/"))
         (:p "Slava Akhmechet, Weblocks author, wrote some articles about it which might be interesting for you"
          (:ul 
            (:li (:a :href "http://www.defmacro.org/ramblings/weblocks-demo.html" "http://www.defmacro.org/ramblings/weblocks-demo.html"))
