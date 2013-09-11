@@ -11,6 +11,17 @@
            :prefix "/"
            :public-files-path "./pub/")
 
+(defmethod application-page-title ((app weblocks-site))
+  "The default page-title method generates a page title from the 
+   application name, application description, and current navigation state."
+  (declare (special *current-page-title*))
+  (let ((webapp-description (webapp-description)))
+    (with-output-to-string (s)
+      (when *current-page-title* 
+        (format s "~A - " *current-page-title*))
+
+      (format s "~A" webapp-description))))
+
 (defun file-get-contents(file &key (external-format :utf-8))
   (with-output-to-string (s)
     (with-open-file (in file :direction :input :external-format external-format)
