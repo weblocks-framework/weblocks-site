@@ -237,6 +237,16 @@
         (:a :target "_blank" :href "http://trac.common-lisp.net/cl-weblocks/wiki/Tutorials" "Weblocks Trac wiki")
         ". Some of these are slightly outdated and need some bits changed to make them
         work with the latest Weblocks code, though.")
+        (:p "There is a page on "
+         (:a :target "_blank" :href "http://common-lisp.net/" "http://common-lisp.net/")
+         " - "
+         (:br)
+         (:a :target "_blank" :href "http://common-lisp.net/project/cl-weblocks/" "http://common-lisp.net/project/cl-weblocks/"))
+        (:p "Slava Akhmechet, Weblocks author, wrote some articles about it which might be interesting for you"
+         (:ul 
+           (:li (:a :href "http://www.defmacro.org/ramblings/weblocks-demo.html" "http://www.defmacro.org/ramblings/weblocks-demo.html"))
+           (:li (:a :href "http://www.defmacro.org/ramblings/continuations-web.html" "http://www.defmacro.org/ramblings/continuations-web.html"))
+           (:li (:a :href "http://www.defmacro.org/ramblings/ui-dsl.html" "http://www.defmacro.org/ramblings/ui-dsl.html"))))
 
     (:h3 "User guide")
     (:p "An early manual draft is " (:a :target "_blank" :href "/pub/user-guide.stx.html" "available") ".")
