@@ -242,7 +242,7 @@
          " - "
          (:br)
          (:a :target "_blank" :href "http://common-lisp.net/project/cl-weblocks/" "http://common-lisp.net/project/cl-weblocks/"))
-        (:p "There is a weblocks tutorial by " 
+        (:p "There is a Weblocks tutorial by " 
          (:a :target "_blank" :href "https://github.com/aggieben" "Benjamin Collins")
          " - "
          (:a :target "_blank" :href "http://bloggoergosum.com/2009/02/12/a-simple-weblocks-application/"  "http://bloggoergosum.com/2009/02/12/a-simple-weblocks-application/"))
