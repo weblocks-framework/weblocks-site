@@ -283,7 +283,12 @@
         " is the central place to get help and discuss development of Weblocks.")
     (:p "You can get free support and talk about bugs and features there.")
     (:p "For professional support please contact "
-        (:a :target "_blank" :href "mailto:olexiy.z@gmail.com" "Olexiy A. Zamkoviy") ".")
+     (:ul 
+       (:li (:a :target "_blank" :href "mailto:olexiy.z@gmail.com" "Olexiy A. Zamkoviy"))
+       (:li (:a :target "_blank" :href "mailto:contact@port-zero.com" "Leslie P. Polzer") 
+        " and "
+        (:a :target "_blank" :href "http://www.port-zero.com/kontakt/" "Port Zero team")))
+     ".")
 
     (:h3 "Common Lisp")
     (:h4 "LispForum")
