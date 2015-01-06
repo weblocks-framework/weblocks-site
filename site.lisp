@@ -324,3 +324,4 @@
                                "Documentation" (make-documentation-page)
                                "Community" (make-community-page)))))
 
+(push (weblocks::create-prefix-dispatcher "/weblocks-demo" (lambda(&rest args) (hunchentoot::redirect "http://weblocks-demo.olexiy.info/"))) weblocks::*dispatch-table*)
